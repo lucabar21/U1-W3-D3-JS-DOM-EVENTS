@@ -1,11 +1,11 @@
 const generateElement = (dataObj) => {
-  const elementContanier = document.getElementById("elements-container");
+  const elementContainer = document.getElementById("elements-container");
 
   const listElement = document.createElement("div");
   listElement.className = "element";
 
   const p = document.createElement("p");
-  p.innerText = dataObj.element;
+  p.innerText = dataObj.elementList;
 
   console.log(p);
   const elementBtn = document.createElement("button");
@@ -15,7 +15,7 @@ const generateElement = (dataObj) => {
     e.currentTarget.closest(".element").remove();
   };
   listElement.appendChild(p);
-  elementContanier.appendChild(listElement);
+  elementContainer.appendChild(listElement);
 };
 
 const form = document.querySelector("form");
